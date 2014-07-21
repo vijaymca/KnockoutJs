@@ -21,6 +21,8 @@ function AppViewModel() {
     }, {
         item: "Two"
     }]);
+	
+	self.newTodo=ko.observable("");
 }
 
 ko.applyBindings(new AppViewModel());
