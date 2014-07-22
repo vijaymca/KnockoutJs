@@ -13,8 +13,9 @@
   <div id="page">
     <header class="container">Welcome to the knockout</header>
     <section id="body" class="container">The Name is
-    <br />The Fullname is
-    <br />
+    <br />The Fullname is: <span data-bind="text:firstName"></span>
+    <span data-bind="text:todoLen"></span>
+	<br />
     <div class="form-horizontal">
       <div class="form-group">
         <label class="col-md-2 control-label" for="txtFirstName">First Name:</label>
@@ -51,9 +52,10 @@
       <div class="form-group">
         <div class="col-md-2 control-label"></div>
         <div class="col-md-4">
-          <input type="text" bata-bind="value:newTodo" class="form-control" placeholder="enter new todo" />
+         <input type="text" data-bind="value:newTodo" class="form-control" placeholder="enter new todo" />
 		  </br>
 		  <a href="#" data-bind="click:addNewTodo" class="btn btn-small btn-primary" >Add</a>
+		  <label class="control-label" id="lblCount">Count</label>
         </div>
       </div>
       <div class="form-group">
