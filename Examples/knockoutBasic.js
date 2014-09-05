@@ -22,24 +22,15 @@ function AppViewModel() {
 					item : "Two"
 				}
 			]);
-
-	self.len = ko.computed(function () {
-			var count = 0;
-			count = self.todos().length;
-			return count;
-		});
-
+			
+	self.todoLen = self.todos().length;
+	
 	self.newTodo = ko.observable();
+
 	self.addNewTodo = function () {
-		self.todos.push({
-			item : self.newTodo()
-		});
+		self.todos.push({item : self.newTodo()});
 		$('#lblCount').html(self.todos().length);
 		self.newTodo("");
-	}
-
-	self.removeTodo = function () {
-		self.todos.remove(this);
 	}
 }
 
