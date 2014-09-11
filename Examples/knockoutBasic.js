@@ -7,7 +7,6 @@ var myViewModel = {
 
 
 function AppViewModel() {
-
 	var self = this;
 	self.firstName = ko.observable('Vijay');
 	self.lastName = ko.observable('Bhaskar');
@@ -22,16 +21,15 @@ function AppViewModel() {
 					item : "Two"
 				}
 			]);
-			
-	self.todoLen = self.todos().length;
-	
-	self.newTodo = ko.observable();
 
+	self.todoLen = self.todos().length;
+	self.newTodo = ko.observable();
 	self.addNewTodo = function () {
-		self.todos.push({item : self.newTodo()});
+		self.todos.push({
+			item : self.newTodo()
+		});
 		$('#lblCount').html(self.todos().length);
 		self.newTodo("");
 	}
 }
-
 ko.applyBindings(new AppViewModel());

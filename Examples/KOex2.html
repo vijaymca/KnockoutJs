@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+<title>KO Example2</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="koex2.css" rel="stylesheet" />
+    <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../knockout-3.1.0.js"></script>
+	<script type="text/javascript" src="knockout.simpleGrid.3.0.js"></script>
+</head>
+
+<body>
+
+<div class='liveExample'> 
+    
+    <div data-bind='simpleGrid: gridViewModel'> </div>
+     
+    <button data-bind='click: addItem'>
+        Add item
+    </button>
+     
+    <button data-bind='click: sortByName'>
+        Sort by name
+    </button>
+     
+    <button data-bind='click: jumpToFirstPage, enable: gridViewModel.currentPageIndex'>
+        Jump to first page
+    </button>
+    
+</div>
+<script type="text/javascript" src="../bootstrap.min.js"></script> 
+<script type="text/javascript" src="koex2.js"></script> 
+</body>
+</html>
